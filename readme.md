@@ -1,4 +1,4 @@
-# To run the main program file with A* planning and Stationary Obstacle (check)
+# To Run the Main Program File with A* Planning
 Open MPC_MAIN_navigation.py and run.
 	
 ### Tunable options for user:
@@ -14,7 +14,7 @@ Open MPC_MAIN_navigation.py and run.
 
 
 
-# To test navigation through moving obstacles using potential fields and MPC 
+# To Test Navigation through Moving Obstacles using Potential Fields and MPC 
 Run mpc_test.py set run_code=1
 
 ### Tunable  options for user:
@@ -28,24 +28,31 @@ Run mpc_test.py set run_code=1
 8. W3 = np.array([0.01, 0.1])  # rate of input change weightage
 	*NUM_OF_OBSTACLES (default = 12)
 
-To test only path following using MPC set run_code=2
-	Tunable  options for user:
-	*Set save_simulation=True if you want to save simulation
-	*set start point (default (0,-5))	
-	*Horizon length (default=5)
-	*desired_speed (default=5)
-	*cost function weights W1, W2, W3 
-	*default: W1 = np.array([0.01, 0.01])  # input weightage
-		  W2 = np.array([2.0, 2.0, 0.5, 0.5])  # state error weightage
-		  W3 = np.array([0.01, 0.1])  # rate of input change weightage
-	*To change path uncomment any one of the paths given on lines 521 to 523		
-		521.. #path_x,path_y,path_yaw = get_right_turn(dist_step)
+# To Test only Path Following Using MPC
+Run mpc_test.py set run_code=2
+	
+### Tunable  options for user:
+1. Set save_simulation=True if you want to save simulation
+2. set start point (default (0,-5))	
+3. Horizon length (default=5)
+4. desired_speed (default=5)
+5. cost function weights W1, W2, W3 
+6. default: 
+    * W1 = np.array([0.01, 0.01])  # input weightage
+    *  W2 = np.array([2.0, 2.0, 0.5, 0.5])  # state error weightage
+	*  W3 = np.array([0.01, 0.1])  # rate of input change weightage
+
+#### To change path uncomment any one of the paths given on lines 521 to 523		
+		    521.. #path_x,path_y,path_yaw = get_right_turn(dist_step)
     		522.. path_x,path_y,path_yaw = get_forward_course(dist_step)
     		523.. #path_x,path_y,path_yaw = get_straight_course(dist_step)
 
  
-To test only potential field set run_code=3
-	Tunable  options for user:
-	*Set save_simulation=True if you want to save simulation
-	*set start point and goal point (default (0,-5) and (50,30))	
-	*NUM_OF_OBSTACLES (default = 12)
+# To Test only Potential Field 
+set run_code=3
+	
+### Tunable  options for user:
+
+1. Set save_simulation=True if you want to save simulation
+2. set start point and goal point (default (0,-5) and (50,30))	
+3. NUM_OF_OBSTACLES (default = 12)
