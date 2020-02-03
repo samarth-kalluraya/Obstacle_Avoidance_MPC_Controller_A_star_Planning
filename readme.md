@@ -43,9 +43,9 @@ Run mpc_test.py set run_code=2
 	*  W3 = np.array([0.01, 0.1])  # rate of input change weightage
 
 #### To change path uncomment any one of the paths given on lines 521 to 523		
-521.. #path_x,path_y,path_yaw = get_right_turn(dist_step)
-522.. path_x,path_y,path_yaw = get_forward_course(dist_step)
-523.. #path_x,path_y,path_yaw = get_straight_course(dist_step)
+521 path_x,path_y,path_yaw = get_right_turn(dist_step)
+522 path_x,path_y,path_yaw = get_forward_course(dist_step)
+523 path_x,path_y,path_yaw = get_straight_course(dist_step)
 
  
 # To Test only Potential Field 
